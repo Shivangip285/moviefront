@@ -1,4 +1,8 @@
 fileignoreconfig:
 - filename: src/config/env-config.js
   checksum: fbf08d3f2f76031ac28ca5cb7c65294ba0d4de6c07d9f248f69e9dc9a417b69f
-  ignore_detectors: [filename]
+ ignore_detectors: [filename]
+fileignoreconfig:
+- filename: yarn.lock
+  checksum: cfb23c345053513fcb2ed365fc233f1be7fc2b04bea395eab589097ca2a1bf7f
+version: ""

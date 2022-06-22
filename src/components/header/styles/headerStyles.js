@@ -27,6 +27,13 @@ export default makeStyles((theme) => ({
         cartButton: {
             color: "white",
             padding: "10px"
+        },
+        PersonIcon:{
+        position: "absolute",
+        right:"150px",
+        top:"19px",
+        alignItems: "center",
+        color: "white",
         }
     })
 );

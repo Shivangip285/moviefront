@@ -1,6 +1,7 @@
 import React from "react";
 import {AppBar, Toolbar, Typography} from "@material-ui/core";
 import MovieIcon from '@material-ui/icons/Movie';
+import PersonIcon from '@material-ui/icons/Person';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import styles from "./styles/headerStyles";
 import PropTypes from "prop-types";
@@ -16,6 +17,9 @@ const Header = ({onLogout, isAuthenticated}) => {
                     <Typography className={classes.headerLogo} variant="body1">
                         Logout
                     </Typography>
+                    <a href="/">
+                    <PersonIcon  className={classes.PersonIcon}/>
+                    </a>
                 </div>
             );
         }
@@ -29,7 +33,8 @@ const Header = ({onLogout, isAuthenticated}) => {
                     <Typography className={classes.headerLogo} variant="h5">
                         SkyFox Cinema
                     </Typography>
-                </a>
+                    </a>
+
                 {logoutSection()}
             </Toolbar>
         </AppBar>

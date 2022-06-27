@@ -28,7 +28,7 @@ const SeatSelectionDialog = ({selectedShow, updateShowsRevenue, open, onClose}) 
                     </Typography>
                     <div className={classes.dialogContent}>
                         <div className={classes.moviePicture}>
-                            <Avatar>
+                            <Avatar src = {selectedShow.movie.poster}>
                                 <LocalMoviesIcon/>
                             </Avatar>
                         </div>

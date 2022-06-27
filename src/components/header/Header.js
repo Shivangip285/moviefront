@@ -6,8 +6,10 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import styles from "./styles/headerStyles";
 import PropTypes from "prop-types";
 
+
 const Header = ({onLogout, isAuthenticated}) => {
     const classes = styles();
+
 
     const logoutSection = () => {
         if (isAuthenticated) {
@@ -17,7 +19,7 @@ const Header = ({onLogout, isAuthenticated}) => {
                     <Typography className={classes.headerLogo} variant="body1">
                         Logout
                     </Typography>
-                    <a href="/">
+                    <a href= "profile/Profile.js" >
                     <PersonIcon  className={classes.PersonIcon}/>
                     </a>
                 </div>

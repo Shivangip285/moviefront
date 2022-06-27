@@ -37,7 +37,9 @@ export default ({location, history}) => {
             "id": "",
             "name": "",
             "duration": "",
-            "plot": ""
+            "plot": "",
+            "poster":""
+
         },
         "slot": {
             "id": "",
@@ -65,7 +67,7 @@ export default ({location, history}) => {
                                 setShowSelectSeatDialog(true);
                             }}>
                                 <ListItemAvatar classes={{root: classes.localMoviesIcon}}>
-                                    <Avatar>
+                                    <Avatar src = {show.movie.poster}>
                                         <LocalMoviesIcon/>
                                     </Avatar>
                                 </ListItemAvatar>

@@ -26,6 +26,7 @@ export const login = async (username, password) => {
 
 export const isLoggedIn = () => {
     return localStorage.getItem(tokenKey) !== null;
+
 }
 
 export const logout = () => {
@@ -35,3 +36,20 @@ export const logout = () => {
 const authBasic = (username, password) => {
     return window.btoa(username + ':' + password);
 }
+
+export const signup = async (name,username,mobileNumber,email,password,confirmPassword,city,DOB) => {
+    const token = authBasic(name,username,mobileNumber,email,password,confirmPassword,city,DOB);
+    const config = {
+        headers: {
+            Authorization: 'Basic ' + token
+        }
+    };
+    const response = await axios.get(`${urls.service}/signup`, config);
+    const userDetails = response.data;
+    localStorage.setItem(tokenKey, token)
+    return userDetails;
+}
+
+export const isSignedUp = () => {
+    return localStorage.getItem(tokenKey) !== null;
+    }

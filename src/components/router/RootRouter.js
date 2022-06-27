@@ -8,8 +8,10 @@ import {Error} from "../common";
 import {Login, ProtectedRoute} from "../login";
 import PropTypes from "prop-types";
 import moment from "moment";
+import {Profile} from "../profile";
+import {Signup} from "../signup";
 
-const RootRouter = ({isAuthenticated, onLogin}) => {
+const RootRouter = ({isAuthenticated, onLogin ,onSignup}) => {
     const todayDate = moment().format("YYYY-MM-DD");
 
     return (
@@ -18,9 +20,14 @@ const RootRouter = ({isAuthenticated, onLogin}) => {
                 <Redirect path="/" exact to={`/shows?date=${todayDate}`}/>
                 <ProtectedRoute exact path="/shows" component={Shows} isAuthenticated={isAuthenticated}/>
 
+
+
                 <Route exact path="/login"
                        component={(props) => <Login isAuthenticated={isAuthenticated} onLogin={onLogin} {...props}/>}/>
+                <Route exact path="/profile" component={Profile}/>
 
+                <Route exact path="/signup"
+                    component={(props) => <Signup isAuthenticated={isAuthenticated} onSignup={onSignup}  {...props}/>}/>
                 <Route exact path="/error" component={
                     () => <Error errorIcon={ErrorOutlineIcon} errorMessage={"Oops..Something went wrong"}/>
                 }

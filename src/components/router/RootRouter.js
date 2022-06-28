@@ -8,9 +8,13 @@ import {Error} from "../common";
 import {Login, ProtectedRoute} from "../login";
 import PropTypes from "prop-types";
 import moment from "moment";
+<<<<<<< HEAD
 import {Profile} from "../profile";
+=======
+import {Signup} from "../signup";
+>>>>>>> 22121fa30f8d0e1f1babcd051d18fab5180b1afe
 
-const RootRouter = ({isAuthenticated, onLogin}) => {
+const RootRouter = ({isAuthenticated, onLogin ,onSignup}) => {
     const todayDate = moment().format("YYYY-MM-DD");
 
     return (
@@ -21,9 +25,14 @@ const RootRouter = ({isAuthenticated, onLogin}) => {
 
                 <Route exact path="/login"
                        component={(props) => <Login isAuthenticated={isAuthenticated} onLogin={onLogin} {...props}/>}/>
+<<<<<<< HEAD
 
                 <Route exact path="/profile" component={Profile} isAuthenticated={isAuthenticated} />
 
+=======
+                <Route exact path="/signup"
+                    component={(props) => <Signup isAuthenticated={isAuthenticated} onSignup={onSignup}  {...props}/>}/>
+>>>>>>> 22121fa30f8d0e1f1babcd051d18fab5180b1afe
                 <Route exact path="/error" component={
                     () => <Error errorIcon={ErrorOutlineIcon} errorMessage={"Oops..Something went wrong"}/>
                 }

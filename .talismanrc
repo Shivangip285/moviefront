@@ -1,8 +1,13 @@
 fileignoreconfig:
 - filename: src/config/env-config.js
   checksum: fbf08d3f2f76031ac28ca5cb7c65294ba0d4de6c07d9f248f69e9dc9a417b69f
- ignore_detectors: [filename]
-fileignoreconfig:
+  ignore_detectors: [filename]
 - filename: yarn.lock
   checksum: cfb23c345053513fcb2ed365fc233f1be7fc2b04bea395eab589097ca2a1bf7f
+- filename: package.json
+  checksum: 61bca21e85c96083896dbaca3c9be70ee1f8d3295120a846d6d0204b455d2e89
+- filename: src/components/signup/services/signupFormService.js
+  checksum: a28ad00723d07334d9010c6ba78bad2ec64a3a4a2baf6c118e18e1ab9f9fc81b
+- filename: src/components/signup/Signup.js
+  checksum: 0606ad7121d78aa9ebcfc18f058d9b4736604ae4e05aaf9b53d4db01df3fc25a
 version: ""

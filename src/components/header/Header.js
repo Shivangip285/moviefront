@@ -21,6 +21,7 @@ const Header = ({onLogout, isAuthenticated}) => {
     }
 
 
+
     const logoutSection = () => {
         if (isAuthenticated) {
             return (
@@ -31,8 +32,16 @@ const Header = ({onLogout, isAuthenticated}) => {
                     <Typography className={classes.headerLogo} variant="body1">
                         Logout
                     </Typography>
+<<<<<<< HEAD
 
                   </div>
+=======
+                    <a href="/profile">
+                    <PersonIcon  className={classes.PersonIcon}/>
+                    </a>
+                    <h3 className={classes.welcomeDisplay}> Welcome,User!</h3>
+                </div>
+>>>>>>> 22121fa30f8d0e1f1babcd051d18fab5180b1afe
             );
         }
 
@@ -48,7 +57,14 @@ const Header = ({onLogout, isAuthenticated}) => {
                         SkyFox Cinema
                     </Typography>
                     </a>
+<<<<<<< HEAD
                     {ProfileIcon()}
+=======
+                    <a href="/profile">
+                    <PersonIcon  className={classes.PersonIcon}/>
+                    </a>
+
+>>>>>>> 22121fa30f8d0e1f1babcd051d18fab5180b1afe
                 {logoutSection()}
             </Toolbar>
         </AppBar>

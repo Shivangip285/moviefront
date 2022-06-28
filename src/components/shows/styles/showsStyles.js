@@ -51,6 +51,6 @@ export default makeStyles((theme) =>
             backgroundColor: theme.palette.background.paper,
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
-        }
+        },
     })
 );

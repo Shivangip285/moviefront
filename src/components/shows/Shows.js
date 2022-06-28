@@ -20,10 +20,21 @@ import {dateFromSearchString, nextDateLocation, previousDateLocation} from "./se
 import ShowsRevenue from "./ShowsRevenue";
 import useShowsRevenue from "./hooks/useShowsRevenue";
 import SeatSelectionDialog from "./SeatSelectionDialog";
+import Popup from "./Popup";
 
 export default ({location, history}) => {
     const classes = styles();
-
+    const Modal = () => (
+      <Popup trigger={<Button
+      className={classes.submit}
+      color = "primary"
+      variant = "contained"
+      >
+      SCHEDULE MOVIE
+      </Button>} modal>
+      <span> Modal content </span>
+      </Popup>
+    );
     const showsDate = dateFromSearchString(location.search);
 
     const {shows, showsLoading} = useShows(showsDate);
@@ -37,7 +48,9 @@ export default ({location, history}) => {
             "id": "",
             "name": "",
             "duration": "",
-            "plot": ""
+            "plot": "",
+            "poster":""
+
         },
         "slot": {
             "id": "",
@@ -54,6 +67,9 @@ export default ({location, history}) => {
                 <Typography variant="h4" className={classes.showsHeader}>
                     Shows ({showsDate.format(HEADER_DATE_FORMAT)})
                 </Typography>
+                <div>
+                <Modal className={classes.modal}/>
+                                </div>
                 <ShowsRevenue showsRevenue={showsRevenue} showsRevenueLoading={showsRevenueLoading}/>
             </div>
             <List className={classes.listRoot}>
@@ -65,7 +81,7 @@ export default ({location, history}) => {
                                 setShowSelectSeatDialog(true);
                             }}>
                                 <ListItemAvatar classes={{root: classes.localMoviesIcon}}>
-                                    <Avatar>
+                                    <Avatar src = {show.movie.poster}>
                                         <LocalMoviesIcon/>
                                     </Avatar>
                                 </ListItemAvatar>

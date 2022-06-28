@@ -21,6 +21,10 @@ const CustomerDetailsDialog = ({seats, selectedShow, updateShowsRevenue, open, o
         name: "",
         phoneNumber: ""
     };
+    const handleClose = () => {
+
+            onClose();
+        };
 
     const formSchema = object({
         name: string("Enter name")
@@ -97,7 +101,11 @@ const CustomerDetailsDialog = ({seats, selectedShow, updateShowsRevenue, open, o
                 </Formik>
             </Dialog>
 
-            <BookingConfirmation bookingConfirmation={bookingConfirmation} showConfirmation={showConfirmation} />
+            <BookingConfirmation bookingConfirmation={bookingConfirmation} showConfirmation={showConfirmation}
+            open={bookingConfirmation} onClose={() => {
+            handleClose();
+            setShowConfirmation(false)}}/>
+
 
             <Snackbar open={success === false} autoHideDuration={2000} onClose={() => setSuccess(null)}>
                 <Alert severity="error">

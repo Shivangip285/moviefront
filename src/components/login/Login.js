@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {Form, Formik} from "formik";
 import {FormikTextField} from "../formik";
 import {Button} from "@material-ui/core";
-import styles from "./styles/loginStyles"
+import styles from "./styles/loginStyles";
 import PropTypes from "prop-types";
 import useLogin from "./hooks/useLogin";
 import {formSchema, initialValues} from "./services/loginFormService";
@@ -56,6 +56,9 @@ const Login = ({location, history, isAuthenticated, onLogin}) => {
                                 >
                                     Login
                                 </Button>
+                                <span className={classes.signupPage}>
+                                New to SkyFox? <a href="/signup">signup</a>
+                                </span>
                             </Form>
                         );
                     }

@@ -1,18 +1,38 @@
-import React from 'react'
-import {Dialog, DialogContent, Typography} from "@material-ui/core";
+import React , {useState} from 'react'
+import {Dialog, DialogContent, Typography,Button} from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert/Alert";
 import styles from "./styles/customerDetailsDialogStyles"
+import DownloadIcon from '@mui/icons-material/Download';
 
-const BookingConfirmation = ({bookingConfirmation, showConfirmation}) => {
-    const classes = styles();
+
+
+
+const BookingConfirmation = ({bookingConfirmation, showConfirmation,open,onClose}) => {
+ const [success, setSuccess] = useState(null);
+
+  const classes = styles();
+
+  const handleClose = () => {
+      onClose();
+        };
+
+
     return (
-      <Dialog open={showConfirmation}>
-         <Alert severity="success">
-                         Seats booked successfully!
+
+
+
+      <Dialog open={showConfirmation} onClose={handleClose}>
+            <Alert severity="success">
+                Seats booked successfully!
+
+                   <DownloadIcon className={classes.downloadIcon} />
+
             </Alert>
+
             <Typography variant="h6" className={classes.dialogHeader}>
                 Booking Confirmation
-            </Typography>
+               </Typography>
+
             <DialogContent>
                 <Typography variant="body1" display="block" gutterBottom>
                     Booking id : {bookingConfirmation.id}

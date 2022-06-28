@@ -18,7 +18,8 @@ describe("Basic rendering and functionality", () => {
             name: "Movie 1",
             plot: "Suspense movie",
             duration: "1hr 30m"
-        },
+
+            },
         slot: {startTime: "start time 1"}
     };
 

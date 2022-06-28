@@ -33,8 +33,11 @@ const Header = ({onLogout, isAuthenticated}) => {
                         Logout
                     </Typography>
 
+
                     <h3 className={classes.welcomeDisplay}> Welcome,User!</h3>
+
                 </div>
+
             );
         }
 
@@ -51,7 +54,10 @@ const Header = ({onLogout, isAuthenticated}) => {
                     </Typography>
                     </a>
 
+
                     {ProfileIcon()}
+
+
                 {logoutSection()}
             </Toolbar>
         </AppBar>

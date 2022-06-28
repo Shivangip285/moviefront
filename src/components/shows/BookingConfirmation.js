@@ -21,11 +21,15 @@ const BookingConfirmation = ({bookingConfirmation, showConfirmation,open,onClose
 
 
 
+
+
       <Dialog open={showConfirmation} onClose={handleClose}>
             <Alert severity="success">
                 Seats booked successfully!
 
                    <DownloadIcon className={classes.downloadIcon} />
+
+
 
             </Alert>
 

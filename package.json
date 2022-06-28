@@ -18,6 +18,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
+    "reactjs-popup": "^2.0.5",
     "typeface-roboto": "^0.0.75",
     "yup": "^0.28.3",
     "yup-password": "^0.2.2"

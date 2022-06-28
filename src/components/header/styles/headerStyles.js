@@ -34,6 +34,13 @@ export default makeStyles((theme) => ({
         top:"19px",
         alignItems: "center",
         color: "white",
+        },
+        welcomeDisplay:{
+        position: "absolute",
+        right:"190px",
+        top:"5px",
+        alignItems: "center",
+        color: "white",
         }
     })
 );

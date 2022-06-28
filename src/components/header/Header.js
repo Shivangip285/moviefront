@@ -19,9 +19,10 @@ const Header = ({onLogout, isAuthenticated}) => {
                     <Typography className={classes.headerLogo} variant="body1">
                         Logout
                     </Typography>
-                    <a href= "profile/Profile.js" >
+                    <a href="/profile">
                     <PersonIcon  className={classes.PersonIcon}/>
                     </a>
+                    <h3 className={classes.welcomeDisplay}> Welcome,User!</h3>
                 </div>
             );
         }
@@ -35,6 +36,9 @@ const Header = ({onLogout, isAuthenticated}) => {
                     <Typography className={classes.headerLogo} variant="h5">
                         SkyFox Cinema
                     </Typography>
+                    </a>
+                    <a href="/profile">
+                    <PersonIcon  className={classes.PersonIcon}/>
                     </a>
 
                 {logoutSection()}

@@ -4,9 +4,13 @@ import Popup from 'reactjs-popup';
 import styles from "./styles/showsStyles";
 import "./styles/ScheduleMovie.css";
 import "./styles/popup.css";
+import useMovies from "./hooks/useMovies";
+import useSlots from "./hooks/useSlots";
+import DropdownList from "react-widgets/DropdownList";
 
 export default () => {
     const classes = styles();
+    const {movies, moviesLoading} = useMovies();
     return(
     <Popup
     trigger={<Button color="primary" variant="contained"> Schedule Movie </Button>}
@@ -20,14 +24,16 @@ export default () => {
         </button>
         <div className="header"> Schedule Movie </div>
         <div className="content">
-          {' '}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
-          Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
-          delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
-          <br />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
-          commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
-          explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
+          <div>
+            <DropdownList
+                className="dropdown_customized"
+                data={movies}
+                textField='name'
+                //groupBy={person => person.fullName.length}
+              />
+          </div>
+
+
         </div>
         <div className="actions">
           <Popup

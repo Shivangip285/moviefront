@@ -18,3 +18,9 @@
 [data-popup='tooltip'].popup-overlay {
   background: transparent;
 }
+
+.dropdown_customized {
+    position: static;
+    max-width: 200px !important;
+    border: none !important;
+}

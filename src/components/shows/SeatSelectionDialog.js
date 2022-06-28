@@ -7,6 +7,7 @@ import CustomerDetailsDialog from "./CustomerDetailsDialog";
 import {INR_SYMBOL} from "../../Constants";
 import PropTypes from "prop-types";
 
+
 const SeatSelectionDialog = ({selectedShow, updateShowsRevenue, open, onClose}) => {
     const [showCustomerDetails, setShowCustomerDetails] = useState(false);
     const [seats, setSeats] = useState("1");
@@ -16,6 +17,7 @@ const SeatSelectionDialog = ({selectedShow, updateShowsRevenue, open, onClose}) 
         setSeats("1");
         onClose();
     };
+
 
     return (
         <>

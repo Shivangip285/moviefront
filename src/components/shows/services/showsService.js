@@ -14,5 +14,12 @@ export default {
     create: async (payload) => {
         const response = await apiService.post("shows", payload);
         return response.data;
+    },
+
+    change: async (oldPassword,password) => {
+
+        return await apiService.postWithoutErrorHandling(`changePassword?password=${password}&oldpassword=${oldPassword}`);
     }
+
+
 }

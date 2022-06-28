@@ -13,6 +13,7 @@ export const authHeader = () => {
 
 export const login = async (username, password) => {
     const token = authBasic(username, password);
+
     const config = {
         headers: {
             Authorization: 'Basic ' + token

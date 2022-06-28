@@ -8,6 +8,7 @@ import useLogin from "./hooks/useLogin";
 import {formSchema, initialValues} from "./services/loginFormService";
 
 const Login = ({location, history, isAuthenticated, onLogin}) => {
+
     const classes = styles();
     const {from} = location.state || {from: {pathname: "/"}};
     const {errorMessage, handleLogin} = useLogin(onLogin);

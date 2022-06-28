@@ -7,8 +7,8 @@ const BookingConfirmation = ({bookingConfirmation, showConfirmation}) => {
     const classes = styles();
     return (
       <Dialog open={showConfirmation}>
-            <Alert severity="success">
-                Seats booked successfully!
+         <Alert severity="success">
+                         Seats booked successfully!
             </Alert>
             <Typography variant="h6" className={classes.dialogHeader}>
                 Booking Confirmation

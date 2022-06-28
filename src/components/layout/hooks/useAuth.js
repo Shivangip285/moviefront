@@ -13,8 +13,9 @@ export default () => {
         return userDetails;
     };
 
-    const handleLogout = () => {
+     const handleLogout = () => {
         logout();
+        console.log("logout");
         setIsAuthenticated(false);
     };
 
@@ -24,3 +25,5 @@ export default () => {
         handleLogout: handleLogout
     };
 }
+
+

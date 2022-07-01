@@ -23,12 +23,26 @@ import SeatSelectionDialog from "./SeatSelectionDialog";
 import Popup from "./Popup";
 
 export default ({location, history}) => {
+const [disable, setDisable] = React.useState(false);
+const getDateAsDay = someDate =>
+  new Date(someDate.getYear(), someDate.getMonth(), someDate.getDay())
+
+const datesAreEqual = (showsDate, someDate) =>
+  getDateAsDay(showsDate).getTime() === getDateAsDay(someDate).getTime()
+
+const dateIsAfter = (showsDate, someDate) =>
+  getDateAsDay(showsDate).getTime() > getDateAsDay(someDate).getTime()
+
+const dateIsBefore = (showsDate, someDate) =>
+  getDateAsDay(showsDate).getTime() < getDateAsDay(someDate).getTime()
+
+
     const classes = styles();
     const Modal = () => (
-      <Popup trigger={<Button
-      className={classes.submit}
+      <Popup showsDate={showsDate} trigger={<Button
       color = "primary"
       variant = "contained"
+      disabled
       >
       SCHEDULE MOVIE
       </Button>} modal>
@@ -60,7 +74,7 @@ export default ({location, history}) => {
         }
     };
     const [selectedShow, setSelectedShow] = useState(emptyShow);
-
+    //const startTimes=shows.show.slot.startTime
     return (
         <>
             <div className={classes.cardHeader}>

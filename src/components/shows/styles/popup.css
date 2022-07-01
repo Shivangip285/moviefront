@@ -11,16 +11,23 @@
   width: 200px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
 }
-
 .popup-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
 [data-popup='tooltip'].popup-overlay {
   background: transparent;
 }
-
+.right-section{
+   display: inline-block;
+   margin-right: 15px;
+}
 .dropdown_customized {
     position: static;
-    max-width: 200px !important;
+    max-width: 300px !important;
     border: none !important;
+    max-height:150px;
+    overflow:auto;
+    marginRight: 20;
+    display: "inline-block";
+    verticalAlign: "text-bottom";
 }

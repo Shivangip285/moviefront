@@ -10,11 +10,12 @@ export default {
         const response = await apiService.get(`shows/allshow`);
         return response.data;
     },
+    fetchAllSlots: async () => {
+            const response = await apiService.get(`slots/endTime`);
+            console.log("endTime" + response.data);
+            return response.data;
+        },
 
-    slotTimes: async () => {
-        const response = await apiService.get(`slots`);
-        return response.data;
-    },
 
     getRevenue: async (date) => {
         const response = await apiService.get(`revenue?date=${date}`);
